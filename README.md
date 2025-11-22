@@ -44,3 +44,172 @@ Execute os endpoints na ordem de dependência (ex: crie um Plano antes de criar 
 👥 Contribuições Individuais O projeto foi dividido para garantir responsabilidades claras entre os membros da equipe. Dividimos as responsabilidades principais e o foco técnico de cada um, está demonstrado na tabela abaixo:
 
 https://docs.google.com/spreadsheets/d/1YRMKREjHyEsl-f0fEq8P_M21Iba18Z3FudeMdH_YSFo/edit?usp=sharing
+
+
+Participantes:
+
+🎓 Gabriel Vinícius - 24114290032
+◻️ Github: https://github.com/Gb-Rodrigues7
+
+📌 Descrição do que fez:
+
+✔️ Parte técnica
+
+Criar estrutura inicial do projeto
+
+Configurar Express, Mongoose, CORS
+
+Configurar arquivo database.js
+
+Criar todas as models (os 10 schemas do Mongoose)
+
+Criar o arquivo .env.example
+
+Montar a pasta routes/ vazia
+
+Criar o arquivo app.js
+
+Criar o servidor inicial (server.js ou via app.js)
+
+✔️ Modelagem
+
+Criar o diagrama do banco com:
+
+10 entidades
+
+relacionamentos (pelo menos 5 com referência)
+
+Exportar PNG e salvar em /docs
+
+✔️ GitHub – Issues
+
+Criar issues:
+
+“Modelagem do Banco”
+
+“Configuração Inicial do Projeto”
+
+“Configuração MongoDB Atlas”
+
+“Criar Models”
+
+Criar o template de issues
+
+🎓 Matheus Araujo - 24214290024
+◻️ Github: https://github.com/Matheus-de-araujo2308
+
+📌 Descrição do que fez:
+
+✔️ CRUDs (4 entidades)
+
+Criar controllers + rotas + validações para:
+
+Avaliações Físicas
+
+Turmas
+
+Agendamentos
+
+Equipamentos
+
+✔️ Postman (documentação completa)
+
+Criar collection com todas as rotas
+
+Organizar em pastas por recurso
+
+Criar overviews explicativos
+
+Criar exemplos de body válidos
+
+Exportar como postman_collection.json
+
+✔️ README.md completo
+
+Nome do projeto
+
+Descrição
+
+Tecnologias usadas
+
+Diagrama
+
+Lista de endpoints
+
+Exemplos de requisição
+
+Passo a passo para rodar o projeto
+
+Contribuições individuais de cada membro
+
+✔️ GitHub – Issues
+
+Criar issues:
+
+“CRUD Avaliações”
+
+“CRUD Turmas”
+
+“CRUD Agendamentos”
+
+“CRUD Equipamentos”
+
+“Documentação Postman”
+
+“README do Projeto”
+
+
+🎓 Matheus Estevam - 24214290048
+◻️ Github: https://github.com/Estevam404
+
+📌 Descrição do que fez:
+
+✔️ CRUDs (6 entidades)
+
+Criar controllers + rotas + validações (Yup) para:
+
+Alunos
+
+Professores
+
+Planos
+
+Pagamentos
+
+Treinos
+
+Exercícios
+
+Cada CRUD deve conter:
+
+POST (create)
+
+GET all
+
+GET by ID
+
+PUT (update)
+
+DELETE
+
+Validação com Yup
+
+Validação de ObjectId
+
+Status codes corretos
+
+✔️ GitHub – Issues
+
+Criar issues independentes:
+
+“CRUD Alunos”
+
+“CRUD Professores”
+
+“CRUD Planos”
+
+“CRUD Pagamentos”
+
+“CRUD Treinos”
+
+“CRUD Exercícios”
