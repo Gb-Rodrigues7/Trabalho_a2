@@ -1,0 +1,1228 @@
+{
+	"info": {
+		"_postman_id": "fd5aa9ba-0124-49c0-829c-8e05f5e51091",
+		"name": "Academia API - CRUD Completo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50213292",
+		"_collection_link": "https://gabriel-rodrigues1-3283232.postman.co/workspace/Gabriel-Vinicius-Tavares-Rodrig~6cdb61af-8539-4871-8117-ee4caeeb78bd/collection/50213292-fd5aa9ba-0124-49c0-829c-8e05f5e51091?action=share&source=collection_link&creator=50213292"
+	},
+	"item": [
+		{
+			"name": "01. Alunos",
+			"item": [
+				{
+					"name": "GET Todos Alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/alunos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Aluno",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Carlos Alberto\",\n    \"email\": \"carlos.alberto@exemplo.com\",\n    \"senha\": \"senha123\",\n    \"dataNascimento\": \"2000-01-01\",\n    \"plano\": \"{{id_plano_exemplo}}\" \n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/alunos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Aluno por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/alunos/{{id_aluno_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"alunos",
+								"{{id_aluno_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Aluno",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"carlos.novo@exemplo.com\",\n    \"dataNascimento\": \"2001-01-01\" \n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/alunos/{{id_aluno_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"alunos",
+								"{{id_aluno_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Aluno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/alunos/{{id_aluno_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"alunos",
+								"{{id_aluno_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02. Professores",
+			"item": [
+				{
+					"name": "GET Todos Professores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/professores",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Professor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Ana Lúcia\",\n    \"email\": \"ana.lucia@academia.com\",\n    \"senha\": \"proftreinador\",\n    \"especialidade\": \"Funcional\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/professores",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Professor por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/professores/{{id_professor_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"professores",
+								"{{id_professor_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Professor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"especialidade\": \"Pilates\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/professores/{{id_professor_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"professores",
+								"{{id_professor_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Professor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/professores/{{id_professor_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"professores",
+								"{{id_professor_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "03. Planos",
+			"item": [
+				{
+					"name": "GET Todos Planos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/planos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"planos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Plano",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Plano Diamante\",\n    \"preco\": 180.00,\n    \"descricao\": \"Acesso total + Personal Trainer.\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/planos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"planos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Plano por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/planos/{{id_plano_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"planos",
+								"{{id_plano_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Plano",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"preco\": 199.90\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/planos/{{id_plano_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"planos",
+								"{{id_plano_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Plano",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/planos/{{id_plano_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"planos",
+								"{{id_plano_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "04. Pagamentos",
+			"item": [
+				{
+					"name": "GET Todos Pagamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/pagamentos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"pagamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Registrar Pagamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aluno\": \"{{id_aluno_exemplo}}\", \n    \"plano\": \"{{id_plano_exemplo}}\", \n    \"valor\": 180.00,\n    \"metodo\": \"PIX\",\n    \"dataPagamento\": \"2025-11-01\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/pagamentos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"pagamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Pagamento por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/pagamentos/{{id_pagamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"pagamentos",
+								"{{id_pagamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Pagamento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"metodo\": \"Transferência Bancária\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/pagamentos/{{id_pagamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"pagamentos",
+								"{{id_pagamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Pagamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/pagamentos/{{id_pagamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"pagamentos",
+								"{{id_pagamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "05. Treinos",
+			"item": [
+				{
+					"name": "GET Todos Treinos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/treinos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"treinos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Treino",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aluno\": \"{{id_aluno_exemplo}}\", \n    \"professor\": \"{{id_professor_exemplo}}\", \n    \"nome\": \"Treino Híbrido C\",\n    \"objetivo\": \"Definição muscular\",\n    \"dataInicio\": \"2025-11-20\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/treinos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"treinos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Treino por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/treinos/{{id_treino_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"treinos",
+								"{{id_treino_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Treino",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"objetivo\": \"Ganho de força\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/treinos/{{id_treino_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"treinos",
+								"{{id_treino_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Treino",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/treinos/{{id_treino_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"treinos",
+								"{{id_treino_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "06. Exercicios",
+			"item": [
+				{
+					"name": "GET Todos Exercícios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/exercicios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"exercicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Exercício",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Leg Press 45°\",\n    \"grupoMuscular\": \"Pernas\",\n    \"series\": 4,\n    \"repeticoes\": 12,\n    \"carga\": 100\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/exercicios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"exercicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Exercício por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/exercicios/{{id_exercicio_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"exercicios",
+								"{{id_exercicio_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Exercício",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"series\": 5,\n    \"repeticoes\": 8\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/exercicios/{{id_exercicio_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"exercicios",
+								"{{id_exercicio_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Exercício",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/exercicios/{{id_exercicio_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"exercicios",
+								"{{id_exercicio_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "07. Turmas",
+			"item": [
+				{
+					"name": "GET Todas Turmas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/turmas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Turma",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Zumba Noturna\",\n    \"professor\": \"{{id_professor_exemplo}}\", \n    \"horario\": \"19:30\",\n    \"capacidade\": 30\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/turmas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Turma por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/turmas/{{id_turma_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"turmas",
+								"{{id_turma_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Turma",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"horario\": \"20:00\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/turmas/{{id_turma_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"turmas",
+								"{{id_turma_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Turma",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/turmas/{{id_turma_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"turmas",
+								"{{id_turma_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "08. Agendamentos",
+			"item": [
+				{
+					"name": "GET Todos Agendamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/agendamentos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"agendamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Agendamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aluno\": \"{{id_aluno_exemplo}}\", \n    \"tipo\": \"Personal Session\",\n    \"dataHora\": \"2025-11-28T14:30:00Z\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/agendamentos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"agendamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Agendamento por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/agendamentos/{{id_agendamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"agendamentos",
+								"{{id_agendamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Agendamento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataHora\": \"2025-11-29T14:30:00Z\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/agendamentos/{{id_agendamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"agendamentos",
+								"{{id_agendamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Agendamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/agendamentos/{{id_agendamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"agendamentos",
+								"{{id_agendamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "09. Avaliações",
+			"item": [
+				{
+					"name": "GET Todas Avaliações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/avaliacoes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"avaliacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Avaliação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"aluno\": \"{{id_aluno_exemplo}}\", \n    \"peso\": 78.0,\n    \"altura\": 1.75,\n    \"percentualGordura\": 17.5,\n    \"dataAvaliacao\": \"2025-11-20\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/avaliacoes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"avaliacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Avaliação por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/avaliacoes/{{id_avaliacao_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"{{id_avaliacao_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Avaliação",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"peso\": 77.0,\n    \"observacoes\": \"Melhora na resistência.\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/avaliacoes/{{id_avaliacao_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"{{id_avaliacao_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Avaliação",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/avaliacoes/{{id_avaliacao_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"avaliacoes",
+								"{{id_avaliacao_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "10. Equipamentos",
+			"item": [
+				{
+					"name": "GET Todos Equipamentos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/equipamentos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"equipamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Criar Equipamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Cadeira Extensora\",\n    \"status\": \"Manutenção\",\n    \"dataAquisicao\": \"2024-05-15\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/equipamentos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"equipamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Equipamento por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/equipamentos/{{id_equipamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"equipamentos",
+								"{{id_equipamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Atualizar Equipamento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"Operacional\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/equipamentos/{{id_equipamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"equipamentos",
+								"{{id_equipamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Equipamento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/equipamentos/{{id_equipamento_exemplo}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"equipamentos",
+								"{{id_equipamento_exemplo}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "id_aluno_exemplo",
+			"value": "667a0d2492f8d83d1c8b4567",
+			"description": "ID de um aluno existente. Substitua pelo real."
+		},
+		{
+			"key": "id_professor_exemplo",
+			"value": "667a0d2492f8d83d1c8b4568",
+			"description": "ID de um professor existente. Substitua pelo real."
+		},
+		{
+			"key": "id_plano_exemplo",
+			"value": "667a0d2492f8d83d1c8b4569",
+			"description": "ID de um plano existente. Substitua pelo real."
+		},
+		{
+			"key": "id_pagamento_exemplo",
+			"value": "667a0d2492f8d83d1c8b4570",
+			"description": "ID de um pagamento existente. Substitua pelo real."
+		},
+		{
+			"key": "id_treino_exemplo",
+			"value": "667a0d2492f8d83d1c8b4571",
+			"description": "ID de um treino existente. Substitua pelo real."
+		},
+		{
+			"key": "id_exercicio_exemplo",
+			"value": "667a0d2492f8d83d1c8b4572",
+			"description": "ID de um exercício existente. Substitua pelo real."
+		},
+		{
+			"key": "id_turma_exemplo",
+			"value": "667a0d2492f8d83d1c8b4573",
+			"description": "ID de uma turma existente. Substitua pelo real."
+		},
+		{
+			"key": "id_agendamento_exemplo",
+			"value": "667a0d2492f8d83d1c8b4574",
+			"description": "ID de um agendamento existente. Substitua pelo real."
+		},
+		{
+			"key": "id_avaliacao_exemplo",
+			"value": "667a0d2492f8d83d1c8b4575",
+			"description": "ID de uma avaliação existente. Substitua pelo real."
+		},
+		{
+			"key": "id_equipamento_exemplo",
+			"value": "667a0d2492f8d83d1c8b4576",
+			"description": "ID de um equipamento existente. Substitua pelo real."
+		}
+	]
+}
